@@ -76,26 +76,24 @@ window.alert(numbers1);
 //Q9
 let numbers2 = "";
 for (let i = 0; i <= 20; i++){
-    numbers2 += i*3;
+    if(i % 3 == 0){
+        alert(i);
+    };
 }
-window.alert(numbers2);
 
 //Q10
-let pick = window.prompt("pick a number between 0 and 100", "");
+let pick = window.prompt("(q10) pick a number between 0 and 100", "");
 while (0 > pick || pick > 100){
     console.log("please pick a number between 0 and 100");
     pick = window.prompt("pick a number between 0 and 100", "");
 }
 
 //Q11
-let something = window.prompt("enter somthing", "");
-let som1 = "";
-if (isNaN(something)){
-    for (let i = something.length-1; i >= 0 ; i--){
-        som1 = som1 + something.charAt(i);
-    }
+let pick1 = window.prompt("(q11) pick a number between 0 and 100", "");
+while (0 > pick1 || pick1 > 100 || !isNaN(pick1)){
+    console.log("please pick a number between 0 and 100");
+    pick1 = window.prompt("pick a number between 0 and 100", "");
 }
-window.alert(som1);
 
 //Q12
 let number3 = window.prompt("(Q12) pick an integer", "") * 1;
@@ -111,5 +109,5 @@ let pick2 = window.prompt("(q13) pick for an average","") * 1;
 for (let i = 1; i <= pick2; i++){
     ssum += i;
 }
-let average = ssum / (pick2 + 1) ;
-window.alert(average);
+let average = ssum / pick2;
+window.alert(Math.floor(average));
